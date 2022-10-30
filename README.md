@@ -1,5 +1,5 @@
 # MySQL-to-GreenPlum-Data-Migration
-This utility allows efficient table creation and data transfer from MySQL database platform to Greenplum. 
+This utility allows efficient table creation and data transfer from MySQL database platform to Greenplum. <br />
 
 # Methods of Data Transfer
 This python utility helps transfer a table data from MySQL to GP using two options, PXF Reader and GPFDist.
@@ -8,20 +8,20 @@ MySQL to GP table data transfer by chunking and transferring the data in small p
 creates chunks of the data based on date.
 ## <pre><code>2. GPFDist: </pre></code>
 MySQL to GP table data transfer by saving the partitioned data in files and loading the files in GP. When using GPFDist, the utility 
-creates separate files based on limited count (number of records) per file.
+creates separate files based on limited count (number of records) per file.<br />
 
 # Design
-![image](https://user-images.githubusercontent.com/26660037/198899676-e845ee9d-15a0-4674-8150-e2d54aab82f7.png)
+![image](https://user-images.githubusercontent.com/26660037/198899676-e845ee9d-15a0-4674-8150-e2d54aab82f7.png)<br />
 
 # Interface
 This utility can easily be initiated using CMD. Upon running the utility, two options of data transfer would appear.<br /><br />
-![image](https://user-images.githubusercontent.com/26660037/198899735-60190107-46c3-4ba4-97bd-d23115941ea6.png)
+![image](https://user-images.githubusercontent.com/26660037/198899735-60190107-46c3-4ba4-97bd-d23115941ea6.png)<br />
 
 # Requirements
 * Python 3.7 and above<br />
 <br />Library Dependencies:<br />
 * Psycopg2<br />
-* PyMSQL
+* PyMSQL<br />
 
 # Configurations:
 * Log Table Creation
@@ -64,7 +64,7 @@ Execute the given create table statement in "S2S_LogTable - Create Table.txt" fi
 The data types for the table creation in GP are mapped from MySQL to relevant GP data types. File Name: DataType_Mappings.txt<br />
 The file contains the default mappings, but if you require to change a data type while moving the data from MySQL to GP, you may do so by changing the mapping of data type.<br />
 Example: left hand side (MySQL datatype) = right hand side (GP datatype)<br /><br />
-![image](https://user-images.githubusercontent.com/26660037/198900398-a0773dc9-dfb7-415c-a7b2-90a8f08b4dfd.png)
+![image](https://user-images.githubusercontent.com/26660037/198900398-a0773dc9-dfb7-415c-a7b2-90a8f08b4dfd.png)<br />
 
 
 # How to run the utility:
